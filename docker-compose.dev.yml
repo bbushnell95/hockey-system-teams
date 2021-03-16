@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+    teams-service:
+        extends:
+            file: docker-compose.yml
+            service: teams-service
+        volumes:
+            - "./app:/app"
+        command: "/start-reload.sh"

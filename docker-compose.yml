@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+    teams-service:
+        image: ${IMAGE_NAME}:${IMAGE_TAG}
+        build:
+            context: .
+        ports:
+            - 80:80
