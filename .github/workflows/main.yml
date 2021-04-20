@@ -35,7 +35,7 @@ jobs:
   push:
     needs: build
     # Only push if the event was a push to main.
-    if: ${{ github.ref == 'refs/heads/main' }}
+    # if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
     steps:
 
