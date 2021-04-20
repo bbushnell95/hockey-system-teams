@@ -31,4 +31,4 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Build Docker Container
-        run: invoke build --image_tag=testing
+        run: invoke build --image-tag=testing
