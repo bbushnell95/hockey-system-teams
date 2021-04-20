@@ -35,6 +35,6 @@ jobs:
   push:
     needs: build
     # Only push if the event was a push to main.
-    if: ${{ github.event == push }}
+    if: ${{ github.ref == 'refs/heads/main' }}
     - name: Push Docker Image
       run: invoke push
