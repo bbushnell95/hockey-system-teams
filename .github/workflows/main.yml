@@ -36,5 +36,8 @@ jobs:
     needs: build
     # Only push if the event was a push to main.
     if: ${{ github.ref == 'refs/heads/main' }}
-    - name: Push Docker Image
-      run: invoke push
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Push Docker Image
+        run: invoke push
