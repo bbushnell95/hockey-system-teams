@@ -32,3 +32,9 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Build Docker Container
         run: invoke build --image-tag=testing
+  push:
+    needs: build
+    # Only push if the event was a push to main.
+    if: ${{ github.event == push }}
+    - name: Push Docker Image
+      run: invoke push
