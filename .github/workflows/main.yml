@@ -38,6 +38,8 @@ jobs:
     # if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
     steps:
+      - name: Install invoke
+        run: python3 -m pip install -r build-requirements.txt
 
       - name: Push Docker Image
         run: invoke push
